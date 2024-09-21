@@ -14,9 +14,9 @@ vizionatmax = 0
 utilizatormax = None   # Utilizatorul cu cele mai multe filme vizionate
 
 for utilizator in persoane:
-    vizionate = len(persoane['filme'])
+    vizionate = len(utilizator['filme'])
     if vizionate > vizionatmax:
-        vizionate = vizionatmax
-        utilizatormax = persoane['filme']
+       vizionatmax = vizionate
+       utilizatormax = utilizator['nume']
 
-print(f"A vazut de {vizionatmax}")
+print(f"{utilizatormax} a vazut de {vizionatmax}")
