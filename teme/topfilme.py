@@ -54,3 +54,38 @@ if e > b and e > c and e > d and e > a and e > f:
     print(f"Cel mai vizionat film a fost Dracula de {e} ori")
 if f > b and f > c and f > d and f > e and f > a:
     print(f"Cel mai vizionat film a fost Slumdog Milionare de {f} ori")
+
+lista = [a, b, c, d, e, f]
+print(lista)
+lista.sort()
+lista.reverse()
+
+valori_procesate = {}
+
+for loc in lista:
+    if loc == a:
+        if a not in valori_procesate:
+            print('Shrek')
+            valori_procesate[a] = "Shrek"
+    if loc == b:
+        if b not in valori_procesate:
+            print('Bond')
+            valori_procesate[b] = "Bond"
+    if loc == c:
+        if c not in valori_procesate:
+            print('Fight Club')
+            valori_procesate[c] = "Fight Club"
+    if loc == d:
+        if d not in valori_procesate:
+            print('The Nun')
+            valori_procesate[d] = "The Nun"
+    if loc == e:
+        if e not in valori_procesate:
+            print('Dracula')
+            valori_procesate[e] = "Dracula"
+    if loc == f:
+        if f not in valori_procesate:
+            print('Slumdog Milionare')
+            valori_procesate[f] = "Slumdog Milionare"
+
+print(valori_procesate)
