@@ -2,9 +2,11 @@
 # codul care credem ca va avea eroare il bagam in try
 # Exception cuprinde exceptiile standar din python
 # de ex se foloseste doar exceptia mica nu tot Exception: ValueError in cazul nostru
+# try excepts se foloseste pentru a prevenii erorile ce pot aparea in timpul rularii codului
+
+
 
 # Structura lui try:
-
 
 # text = input("Adauga un nr: ")
 # try:                                         <- in aceasta sectiune punem codul pe care vrem sa il rulam
