@@ -8,7 +8,6 @@ def validare_nr(nr):
     return int(numar)
 
 def validare_operand(operand):
-    operand = input("Scrie operator: ")
     while operand not in "+-*/":
         operand = input("Valoare gresita, scrie un operator valid: ")
     return operand
@@ -19,17 +18,29 @@ def suma(operator1: int, operator2: int):
 def dif(operator1: int, operator2: int):
     return operator1-operator2
 
+def inmultire(operator1: int, operator2: int):
+    return operator1*operator2
 
-operator1 = validare_nr(1)
-operator2 = validare_nr(2)
+def impartire(operator1: int, operator2: int):
+    while operator2 == 0:
+        operator2 = int(input("Scrie un numar diferit de 0: "))
+    return operator1/operator2
 
-print(operator1, operator2)
+def principal():
+    op1 = validare_nr(1)
+    op2 = validare_nr(2)
+    operand = input("Scrie operator: ")
+    rezultat_ope = validare_operand(operand)
 
-rezultat_ope = validare_operand("da")
+    if rezultat_ope == "+":
+        a = suma(op1, op2)
+    elif rezultat_ope == "-":
+        a = dif(op1, op2)
+    elif rezultat_ope == "*":
+        a = inmultire(op1, op2)
+    elif rezultat_ope == "/":
+        a = impartire(op1, op2)
 
-print(rezultat_ope)
+    return a
 
-a = suma(operator1, operator2)
-b = dif(operator1, operator2)
-print(a)
-print(b)
+print(principal())
