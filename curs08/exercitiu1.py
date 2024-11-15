@@ -32,7 +32,6 @@
 #
 # df_sortat = df.sort_values(by="Varsta", ascending=False)
 # print(df_sortat)
-from unittest.mock import inplace
 
 import pandas as pd
 
@@ -60,8 +59,7 @@ print(df)
 df.rename(columns={"Experienta": "Nr ani de munca"}, inplace=True)
 
 print(df)
-print=("========")
-df.to_csv("date.csv", index=False)
+print("======================")
 
-df22 = pd.read_csv('date.csv')
-print(df22)
+df.to_csv("date.csv", index=False)
+print(df)
